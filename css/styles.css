@@ -4,7 +4,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    min-width: 300px;
+    background-color: #CF2B2B;
 }
 
 h1 {
@@ -38,6 +38,7 @@ h5 {
 
 h6 {
     font-size: 16px;
+    font-weight: 500;
 }
 
 p {
@@ -52,6 +53,7 @@ header {
     position: fixed;
     right: 0;
     left: 0;
+    z-index: 1;
 }
 
 .conteudo-topo {
@@ -62,9 +64,9 @@ footer {
     position: fixed;
     height: 92px;
     bottom: 0;
-    right: 0;
     left: 0;
-    padding: 15px 25px;
+    right: 0;
+    background-color: #FFFFFF;
 }
 
 .botao-concluir {
@@ -74,31 +76,49 @@ footer {
     text-decoration: none;
     font-size: 20px;
     border-radius: 50px;
-    padding: 8px 60px; 
+    padding: 8px 60px;
+    margin: 15px 25px;
 }
 
 main {
-      position: absolute;
-      top: 92px;
-      height: calc(100vh - 184px); /* diferença entre viewport e soma da barra superior e inferior */
-      width: 100vw;
+    position: absolute;
+    top: 92px;
+    background-color:#E5E5E5;
+    width: 100vw;
+    padding-bottom: 100px;
 }
 
-.secao-prato {
-    height: calc(100% / 3);
-    padding: 31px 0 0 19px;
+.secao {
+    margin: 25px 0 0 15px;
 }
 
-.secao-bebida {
-    height: calc(100% / 3);
-    padding: 31px 0 0 19px;
+.container-cards{
+    margin-top: 12px;
+    height: 216px;
+    display: flex;
+    margin-top: 15px;
+    overflow-x: scroll;
 }
 
-.secao-sobremesa {
-    height: calc(100% / 3);
-    padding: 31px 0 0 19px;
+.card {
+    width: 172px;
+    background-color: #FFFFFF;
+    margin-right: 16px;
+    flex-shrink: 0;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    padding: 15px 13px;
 }
 
-.card-prato {
-    
+.conteudo-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.conteudo-card img{
+    width: 144px;
+    height: 87px;
+    border-radius: 4px;
 }
