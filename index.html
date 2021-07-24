@@ -20,97 +20,108 @@
     </header>
 
     <main>
-        <div class="secao">
+        <div class="secao prato">
             <h2>Primeiro, seu prato</h2>
             <ul class='container-cards'>
-                <li class="card">
+                <li class="card" onclick="selecionar(this, 'prato')">
                     <div class="conteudo-card">
                         <img src="images/xtudo.jpg" alt="Tudo Burger">
                         <h4>Tudo Burger</h4>
                         <h5>Carne artesanal, queijo, bacon, presunto e salada</h5>
                         <h6>R$ 17,90</h6>
+                        <ion-icon class="ocultar" name="checkmark-circle"></ion-icon>
                     </div>
+                    
                 </li>
-                <li class="card">
+                <li class="card" onclick="selecionar(this, 'prato')">
                     <div class="conteudo-card">
                         <img src="images/prato-basico.jpg" alt="Prato Básico">
                         <h4>Prato Básico</h4>
                         <h5>Arroz, estrogonofe de carne e batata palha</h5>
                         <h6>R$ 14,90</h6>
+                        <ion-icon class="ocultar" name="checkmark-circle"></ion-icon>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card" onclick="selecionar(this, 'prato')">
                     <div class="conteudo-card">
                         <img src="images/macarrao.jpg" alt="Macarrão ao Molho">
                         <h4>Macarrão ao Molho</h4>
                         <h5>Macarrão com molho de requeijão e maionese</h5>
                         <h6>R$ 13,90</h6>
+                        <ion-icon class="ocultar" name="checkmark-circle"></ion-icon>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card" onclick="selecionar(this, 'prato')">
                     <div class="conteudo-card">
                         <img src="images/coxa-de-frango.jpg" alt="Coxa de Frango">
                         <h4>Coxa de Frango</h4>
                         <h5>5 coxas de frango com ervas</h5>
                         <h6>R$ 16,90</h6>
+                        <ion-icon class="ocultar" name="checkmark-circle"></ion-icon>
                     </div>
                 </li>
             </ul>
         </div>
-        <div class="secao">
+        <div class="secao bebida">
             <h2>Agora, sua bebida</h2>
             <ul class='container-cards'>
-                <li class="card">
+                <li class="card" onclick="selecionar(this, 'bebida')">
                     <div class="conteudo-card">
                         <img src="images/coca.png" alt="Coca Cola Lata">
                         <h4>Coca Cola Lata</h4>
                         <h5>Lata Coca Cola 350 ml gelada</h5>
                         <h6>R$ 4,90</h6>
+                        <ion-icon class="ocultar" name="checkmark-circle"></ion-icon>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card" onclick="selecionar(this, 'bebida')">
                     <div class="conteudo-card">
                         <img src="images/fanta-laranja.png" alt="Fanta Laranja Lata">
                         <h4>Fanta Laranja Lata</h4>
                         <h5>Lata Fanta Laranja 350 ml gelada</h5>
                         <h6>R$ 3,90</h6>
+                        <ion-icon class="ocultar" name="checkmark-circle"></ion-icon>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card" onclick="selecionar(this, 'bebida')">
                     <div class="conteudo-card">
                         <img src="images/guarana.png" alt="Guaraná Lata">
                         <h4>Guaraná Lata</h4>
                         <h5>Lata Guaraná 350 ml gelada</h5>
                         <h6>R$ 4,90</h6>
+                        <ion-icon class="ocultar" name="checkmark-circle"></ion-icon>
                     </div>
                 </li>
             </ul>
         </div>
-        <div class="secao">
+        <div class="secao sobremesa">
             <h2>Por fim, sua sobremesa</h2>
             <ul class='container-cards'>
-                <li class="card">
+                <li class="card" onclick="selecionar(this, 'sobremesa')">
                     <div class="conteudo-card">
                         <img src="images/casquinha.png" alt="Casquinha Baunilha">
                         <h4>Casquinha Baunilha</h4>
                         <h5>1 casquinha de baunilha</h5>
                         <h6>R$ 2,90</h6>
+                        <ion-icon class="ocultar" name="checkmark-circle"></ion-icon>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card" onclick="selecionar(this, 'sobremesa')">
                     <div class="conteudo-card">
                         <img src="images/sundae.png" alt="Sundae Chocolate">
                         <h4>Sundae Chocolate</h4>
                         <h5>1 sundae de chocolate 250ml</h5>
                         <h6>R$ 4,90</h6>
+                        <ion-icon class="ocultar" name="checkmark-circle"></ion-icon>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card" onclick="selecionar(this, 'sobremesa')">
                     <div class="conteudo-card">
                         <img src="images/milkshake.png" alt="Milkshake Morango">
                         <h4>Milkshake Morango</h4>
                         <h5>1 milkshake de morango</h5>
                         <h6>R$ 11,90</h6>
+                        <ion-icon class="ocultar" name="checkmark-circle"></ion-icon>
                     </div>
                 </li>
             </ul>        
@@ -120,5 +131,8 @@
     <footer>
             <button class="botao-concluir">Selecione os 3 itens para fechar o pedido</button>
     </footer>
+    <script src="scripts/scripts.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
