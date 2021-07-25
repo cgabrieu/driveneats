@@ -30,8 +30,7 @@
                         <h5>Carne artesanal, queijo, bacon, presunto e salada</h5>
                         <h6>R$ <strong>17,90</strong></h6>
                         <ion-icon class="ocultar" name="checkmark-circle"></ion-icon>
-                    </div>
-                    
+                    </div>              
                 </li>
                 <li class="card" onclick="selecionar(this, 'prato')">
                     <div class="conteudo-card">
@@ -88,7 +87,7 @@
                         <img src="images/guarana.png" alt="Guaraná Lata">
                         <h4>Guaraná Lata</h4>
                         <h5>Lata Guaraná 350 ml gelada</h5>
-                        <h6>R$ <strong>4,90</strong></h6>
+                        <h6>R$ <strong>5,90</strong></h6>
                         <ion-icon class="ocultar" name="checkmark-circle"></ion-icon>
                     </div>
                 </li>
@@ -129,8 +128,36 @@
     </main>
 
     <footer>
-        <button class="botao-concluir" onclick="finalizarPedido()">Selecione os 3 itens para fechar o pedido</button>
+        <button class="botao-concluir" onclick="abrirPopup()">Selecione os 3 itens para fechar o pedido</button>
     </footer>
+
+    <div class="fundo-confirme-pedido ocultar">
+        <div class="popup-confirme-pedido">
+            <p>Confirme seu pedido</p>
+            <div class="pedido-itens">
+                <div class="linha-item flex-sb">
+                    <div class="nome-prato">base</div>
+                    <div class="valor-prato">base</div>
+                </div>
+                <div class="linha-item flex-sb">
+                    <div class="nome-bebida">base</div>
+                    <div class="valor-bebida">base</div>
+                </div>
+                <div class="linha-item flex-sb">
+                    <div class="nome-sobremesa">base</div>
+                    <div class="valor-sobremesa">base</div>
+                </div>
+                <div class="linha-total flex-sb">
+                    <div>TOTAL</div>
+                    <div class="total-itens">R$ <strong>valor</strong></div>
+                </div>
+            </div>
+            <button class="botao-popup botao-tudocerto" onclick="">Tudo certo, pode pedir!</button>
+            <button class="botao-popup botao-cancelar">Cancelar</button>
+        </div>
+    </div>
+
+
     <script src="scripts/scripts.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

@@ -16,10 +16,14 @@ function selecionar(card, secao) {
 }
 
 function converterValor(valor){
+    if(typeof(valor) === "number")
+        return valor.toString().replace(".",",");
     return Number(valor.replace(",","."));
 }
 
-function finalizarPedido(){
+function abrirPopup(){
+    document.querySelector(".fundo-confirme-pedido").classList.remove("ocultar");
+
     const prato = document.querySelector(".prato .selecionado h4").innerHTML;
     const bebida = document.querySelector(".bebida .selecionado h4").innerHTML;
     const sobremesa = document.querySelector(".sobremesa .selecionado h4").innerHTML;
@@ -29,11 +33,14 @@ function finalizarPedido(){
     + converterValor(document.querySelector(".sobremesa .selecionado strong").innerHTML)).toFixed(2);
 
     const msg = encodeURIComponent(`Olá, gostaria de fazer o pedido:
-    - Prato: ${prato}
-    - Bebida: ${bebida}
-    - Sobremesa: ${sobremesa}
-    Total: R$ ${valor}
-    `);
-
-    window.open(`https://wa.me/5527999439806?text=${msg}`);
+    - *Prato*: ${prato}
+    - *Bebida*: ${bebida}
+    - *Sobremesa*: ${sobremesa}
+    *Total: R$ ${valor}*`);
+    const numFone = "5527999439806";  
 }
+
+function finalizarPedido(numFone, msg) {
+    window.open(`https://wa.me/${numFone}?text=${msg}`);
+}
+
