@@ -1,3 +1,5 @@
+let botaoFecharPedido = false;
+
 function selecionar(card, secao) {
     const selecionado = document.querySelector(`.${secao} .selecionado`);
 
@@ -9,6 +11,7 @@ function selecionar(card, secao) {
         const botaoConcluir = document.querySelector(".botao-concluir");
         botaoConcluir.innerHTML = "Fechar pedido";
         botaoConcluir.classList.add("fechar-pedido-botao");
+        botaoFecharPedido = true;
     }
 }
 
@@ -17,8 +20,7 @@ function converterValor(valor){
 }
 
 function popup(a){
-    if (a === false) document.querySelector(".fundo-confirme-pedido").classList.remove("flex-center");
-    else {
+    if (botaoFecharPedido && a)
         document.querySelector(".fundo-confirme-pedido").classList.add("flex-center");
         document.querySelector(".nome-prato").innerHTML = obterItem("prato");
         document.querySelector(".valor-prato").innerHTML = obterItem("valorPrato");
@@ -27,7 +29,7 @@ function popup(a){
         document.querySelector(".nome-sobremesa").innerHTML = obterItem("sobremesa");
         document.querySelector(".valor-sobremesa").innerHTML = obterItem("valorSobremesa");
         document.querySelector(".total-itens strong").innerHTML = obterItem("total");
-    }
+    if (!a) document.querySelector(".fundo-confirme-pedido").classList.remove("flex-center");
 }
 
 function finalizarPedido(){
@@ -45,9 +47,9 @@ function finalizarPedido(){
 }
 
 function obterItem(e){
-    const valorPrato = document.querySelector(".prato h6 strong").innerHTML;
-    const valorBebida = document.querySelector(".bebida h6 strong").innerHTML;
-    const valorSobremesa = document.querySelector(".sobremesa h6 strong").innerHTML;
+    const valorPrato = document.querySelector(".prato .selecionado strong").innerHTML;
+    const valorBebida = document.querySelector(".bebida .selecionado strong").innerHTML;
+    const valorSobremesa = document.querySelector(".sobremesa .selecionado strong").innerHTML;
 
     if (e == "prato") return document.querySelector(".prato .selecionado h4").innerHTML;
     else if (e == "bebida") return document.querySelector(".bebida .selecionado h4").innerHTML;
