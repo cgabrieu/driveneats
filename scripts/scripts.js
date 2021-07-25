@@ -1,5 +1,3 @@
-let botaoFecharPedido = false;
-
 function selecionar(card, secao) {
     const selecionado = document.querySelector(`.${secao} .selecionado`);
 
@@ -11,7 +9,6 @@ function selecionar(card, secao) {
         const botaoConcluir = document.querySelector(".botao-concluir");
         botaoConcluir.innerHTML = "Fechar pedido";
         botaoConcluir.classList.add("fechar-pedido-botao");
-        botaoFecharPedido = true;
     }
 }
 
