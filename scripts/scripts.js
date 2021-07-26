@@ -3,8 +3,7 @@ let botaoFecharPedido = false;
 function selecionar(card, secao) {
     const selecionado = document.querySelector(`.${secao} .selecionado`);
 
-    if(selecionado !== null)
-        selecionado.classList.remove("selecionado");
+    if(selecionado !== null) selecionado.classList.remove("selecionado");
     card.classList.add("selecionado");
 
     if(document.querySelectorAll(".selecionado").length === 3){
@@ -40,9 +39,9 @@ function finalizarPedido(){
     *Total: R$ ${obterItem("total")}*
 
     *Nome*: ${prompt("Infome seu nome:")}
-    *Endereço*: ${prompt("Infome seu endereço:")}
-    `);
+    *Endereço*: ${prompt("Infome seu endereço:")}`);
     const numFone = "5527999439806";
+
     window.open(`https://wa.me/${numFone}?text=${msg}`, "_self"); //Self para abrir na mesma aba e evitar bloqueio de popup
 }
 
@@ -52,12 +51,12 @@ function obterItem(e){
     const valorSobremesa = document.querySelector(".sobremesa .selecionado strong").innerHTML;
 
     if (e == "prato") return document.querySelector(".prato .selecionado h4").innerHTML;
-    else if (e == "bebida") return document.querySelector(".bebida .selecionado h4").innerHTML;
-    else if (e == "sobremesa") return document.querySelector(".sobremesa .selecionado h4").innerHTML;   
-    else if (e == "valorPrato") return valorPrato; 
-    else if (e == "valorBebida") return valorBebida; 
-    else if (e == "valorSobremesa") return valorSobremesa; 
-    else if (e == "total")
+    if (e == "bebida") return document.querySelector(".bebida .selecionado h4").innerHTML;
+    if (e == "sobremesa") return document.querySelector(".sobremesa .selecionado h4").innerHTML;   
+    if (e == "valorPrato") return valorPrato; 
+    if (e == "valorBebida") return valorBebida; 
+    if (e == "valorSobremesa") return valorSobremesa; 
+    if (e == "total")
         return (converterValor(valorPrato)+converterValor(valorBebida)+converterValor(valorSobremesa)).toFixed(2).replace(".",",");
     return("Error");
 }
