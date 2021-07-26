@@ -19,7 +19,7 @@ function converterValor(valor){
     return Number(valor.replace(",","."));
 }
 
-function popup(a){
+function popup(a){ //Mesma função para abrir ou fechar popup de confimação
     if (botaoFecharPedido && a)
         document.querySelector(".fundo-confirme-pedido").classList.add("flex-center");
         document.querySelector(".nome-prato").innerHTML = obterItem("prato");
@@ -43,7 +43,7 @@ function finalizarPedido(){
     *Endereço*: ${prompt("Infome seu endereço:")}
     `);
     const numFone = "5527999439806";
-    window.open(`https://wa.me/${numFone}?text=${msg}`);
+    window.open(`https://wa.me/${numFone}?text=${msg}`, "_self"); //Self para abrir na mesma aba e evitar bloqueio de popup
 }
 
 function obterItem(e){
